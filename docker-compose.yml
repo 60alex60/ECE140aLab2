@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  server:
+    build:
+      context: ./server
+    ports:
+      - 6543:6543
+      - 11111:11111/udp
+      - 8889:8889/udp
+      - 8890:8890/udp
+    volumes:
+      - ./server/src:/app
